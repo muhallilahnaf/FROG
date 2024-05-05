@@ -1,0 +1,20 @@
+tbody {
+    font-size: smaller !important;
+}
+
+.copy-btn {
+    display: none !important;
+    font-weight: 700 !important;
+    padding: 1em !important;
+    cursor: pointer !important;
+    float: right !important;
+}
+
+.url:hover .copy-btn,
+.copy-btn:hover {
+    display: inline-block !important;
+}
+
+.card {
+    width: 150px !important;
+}

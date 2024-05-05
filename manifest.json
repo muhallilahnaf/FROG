@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3,
+    "name": "FROG - Find Rank On Google",
+    "version": "1.0",
+    "description": "Check Google SERP rank of a list of keywords.",
+    "author": "muhallilahnaf@gmail.com",
+    "icons": {
+        "16": "images/frog16.png",
+        "32": "images/frog32.png",
+        "48": "images/frog48.png",
+        "128": "images/frog128.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "images/frog.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.google.com/*"
+            ],
+            "js": [
+                "content-script/content-script.js"
+            ],
+            "css": [
+                "content-script/content-script.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "resources/result.html",
+                "resources/result.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

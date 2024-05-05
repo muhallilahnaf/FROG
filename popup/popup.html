@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resources/bootstrap.min.css" />
+    <link rel="stylesheet" href="popup.css">
+    <title>FROG</title>
+</head>
+
+<body class="container-fluid bg-light">
+
+    <!-- top bar -->
+    <div class="row my-3">
+        <div class="col d-flex justify-content-center">
+            <img src="../images/frog.png" alt="Logo" width="20" height="20" class="d-inline-block mt-1 me-2">
+            <h5 class="m-0">FROG - Find Rank On Google</h5>
+        </div>
+    </div>
+
+    <!-- keyword tabs -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="card bg-body-tertiary">
+                <div class="card-body">
+
+                    <!-- tabs -->
+                    <ul class="nav nav-tabs nav-fill" id="kw-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active p-1" id="file-tab" data-bs-toggle="tab"
+                                data-bs-target="#file-tab-pane" type="button" role="tab" aria-controls="file-tab-pane"
+                                aria-selected="true">
+                                Add a keyword file
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link p-1" id="input-tab" data-bs-toggle="tab"
+                                data-bs-target="#input-tab-pane" type="button" role="tab" aria-controls="input-tab-pane"
+                                aria-selected="false">
+                                Paste keywords
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- tab content -->
+                    <div class="tab-content mt-4" id="kw-tab-content">
+
+                        <!-- tab pane 1 -->
+                        <div class="tab-pane fade show active" id="file-tab-pane" role="tabpanel"
+                            aria-labelledby="file-tab" tabindex="0">
+                            <!-- file input -->
+                            <div class="mb-2">
+                                <label for="file" class="form-label">
+                                    <small>Add a text file containing keywords</small>
+                                </label>
+                                <input class="form-control form-control-sm" id="file" type="file">
+                            </div>
+                            <!-- separator -->
+                            <div>
+                                <div class="mb-1">
+                                    <small>Separator</small>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="separator" id="separator-newline"
+                                        checked value="newline">
+                                    <label class="form-check-label" for="separator-newline">newline</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="separator" id="separator-comma"
+                                        value="comma">
+                                    <label class="form-check-label" for="separator-comma">comma</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- tab pane 2 -->
+                        <div class="tab-pane fade" id="input-tab-pane" role="tabpanel" aria-labelledby="input-tab"
+                            tabindex="0">
+                            <div class="mb-3">
+                                <label for="text" class="form-label">
+                                    <small>Paste keywords separated by comma</small>
+                                </label>
+                                <textarea class="form-control form-control-sm" id="text" rows="3" cols="50"
+                                    placeholder="e.g.: keyword 1, keyword 2">
+                                    </textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- error alert -->
+                    <div id="error" class="alert alert-danger p-1 ps-3 m-0 hide" role="alert">error!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- select target -->
+    <div class="row">
+        <div class="col">
+            <div class="mb-4">
+                <label for="target" class="form-label ps-1">Search results count</label>
+                <select id="target" class="form-select form-select-sm" aria-label="search results count">
+                    <option selected value="10">Top 10</option>
+                    <option value="15">Top 15</option>
+                    <option value="20">Top 20</option>
+                    <option value="25">Top 25</option>
+                    <option value="30">Top 30</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="domain" class="form-label ps-1">Domains</label>
+                <input type="text" class="form-control form-control-sm" id="domain">
+                <div class="form-text">
+                    Example: bbc.com, en.wikipedia.org. Leave blank to collect ranks of all domains.
+                </div>
+            </div>
+            <div class="mb-4 d-flex">
+                <button class="btn btn-sm btn-dark flex-grow-1 me-3" id="start">Start</button>
+                <button class="btn btn-sm btn-secondary" id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="../resources/bootstrap.bundle.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>

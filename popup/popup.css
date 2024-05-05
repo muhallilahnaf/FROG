@@ -1,0 +1,13 @@
+body {
+    font-size: smaller !important;
+    min-width: 400px !important;
+    min-height: 500px !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.hide {
+    display: none !important;
+}

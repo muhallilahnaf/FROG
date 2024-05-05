@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="result.css">
+    <title>FROG Result</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar bg-dark-subtle">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../images/frog.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                FROG - Find Rank On Google
+            </a>
+            <ul class="navbar-nav ms-auto me-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/muhallilahnaf/frog">Github</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- container -->
+    <div class="container mt-4">
+        <!-- info -->
+        <div class="row mb-5">
+            <div class="col d-flex justify-content-around">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <p id="kw-count" class="card-title display-5"></p>
+                        <small class="card-text"></small>
+                    </div>
+                </div>
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <p id="rank-count" class="card-title display-5"></p>
+                        <small class="card-text"></small>
+                    </div>
+                </div>
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <p id="time-count" class="card-title display-5"></p>
+                        <small class="card-text">Time Taken</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- download -->
+        <div class="row mb-5">
+            <div class="col d-flex justify-content-center">
+                <a role="button" id="download" class="btn btn-large btn-dark">Download CSV</a>
+            </div>
+        </div>
+        <!-- table -->
+        <div class="row">
+            <div class="col">
+                <div id="target"></div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="result.js"></script>
+</body>
+
+</html>
